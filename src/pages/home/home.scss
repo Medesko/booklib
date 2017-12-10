@@ -1,3 +1,61 @@
-page-home {
+@mixin categories-title-style($color){
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 8vw;
+	font-weight: 400;
+	color: $color;
+	margin: 0px;
+}
 
+
+page-home {
+  .home-header
+	{
+    .logo-title .toolbar-title
+    {
+      font-size: 9vw;
+      font-family: 'Rancho', cursive;
+    }
+
+		.header-logo
+		{
+			width: 34vw;
+		}
+  }
+
+  .home-content
+	{
+		.image-heading
+		{
+			height: 150px;
+
+			.bg-overlay
+			{
+				z-index: 1;
+				background-color: rgba($black-c, .6);
+			}
+
+			ion-spinner {
+				z-index: 2;
+			}
+
+			@include spinner-color($white);
+
+			.heading-row
+			{
+				height: 100%;
+				width: 100%;
+				z-index: 3;
+  			position: absolute;
+				@include align-items(center);
+
+				.main-title
+				{
+					@include categories-title-style($white);
+					font-size: 5vw;
+				}
+			}
+		}
+	}
 }

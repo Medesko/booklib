@@ -1,11 +1,18 @@
-<ion-header>
+<ion-header class="home-header">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>BookLib</ion-title>
+    <ion-title class="logo-title">Scheduler</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="home-content">
+    <background-image class="image-heading" [src]="data?.banner_image">
+        <ion-row class="heading-row">
+          <ion-col no-padding offset-100>
+            <h2 class="main-title">{{data?.banner_title}}</h2>
+          </ion-col>
+        </ion-row>
+      </background-image>
 </ion-content>

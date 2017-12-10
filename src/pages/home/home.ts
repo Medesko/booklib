@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { HttpClient } from '@angular/common/http';
+import { DataModel } from './data.model';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
+    data: DataModel;
+  constructor(public navCtrl: NavController, public HttpClient: HttpClient) {
+    this.HttpClient.get('./assets/data/app.json')
+    .toPromise()
+    .then((res: DataModel) => {
+      this.data = res;
+    })
+    .catch(err => console.log(err));
   }
 
 }

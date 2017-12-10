@@ -1,4 +1,4 @@
-# BookLib Application
+# Scheduler Application
 
 This is purely a open source of app with TypeScript. It is still in development.
 
