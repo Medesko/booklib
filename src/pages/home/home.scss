@@ -2,14 +2,15 @@
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	font-size: 8vw;
+	font-size: 5vw;
 	font-weight: 400;
 	color: $color;
-	margin: 0px;
+  margin: 0px;
 }
 
 
 page-home {
+  $categories-grid-padding: 10px;
   .home-header
 	{
     .logo-title .toolbar-title
@@ -56,6 +57,115 @@ page-home {
 					font-size: 5vw;
 				}
 			}
+    }
+
+    .categories-title
+		{
+			font-size: 1.3rem;
+			font-weight: 400;
+			letter-spacing: 0.4px;
+			color: #5e5874;
+			margin: 15px 8px 15px;
+			text-transform: uppercase;
+    }
+
+    .grid-categories
+		{
+      padding: 0 ($categories-grid-padding/2);
+			@include flex-wrap(wrap);
+
+			.category-item
+			{
+				padding: 10px ($categories-grid-padding*2) $categories-grid-padding;
+        border-radius: 8px;
+				.category-heading
+				{
+					padding-bottom: 100%;
+          border-radius: 50%;
+					.bg-overlay
+					{
+						z-index: 1;
+						background-color: rgba($black-c, .6);
+					}
+
+					ion-spinner {
+						z-index: 2;
+					}
+
+					@include spinner-color($white);
+
+					.heading-row
+					{
+						height: 100%;
+						width: 100%;
+						z-index: 3;
+		  			position: absolute;
+						@include align-items(center);
+
+						.category-title
+						{
+              @include categories-title-style($white);
+              text-transform: uppercase;
+						}
+					}
+        }
+
+        .bleu {
+          background-color: #0596de;
+        }
+
+        .red {
+          background-color: #ed4353;
+        }
+
+        .yellow {
+          background-color: #ffa300;
+        }
+
+        .green {
+          background-color: #15a795;
+        }
+
+        .features-item-title {
+          font: inherit;
+          line-height: 1.4;
+          letter-spacing: 0.4px;
+          color: #435f71;
+          font-size: 16px;
+          text-align: center;
+          margin: 4px 0;
+          transition: opacity 300ms;
+      }
+
+      }
+
+
+      .features-item-icon {
+          border-radius: 50%;
+          -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+          margin: 14px;
+          text-align: center;
+          overflow: hidden;
+      }
+
+      .features-item {
+          text-align: center;
+          border-bottom: 0;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+      }
+      .features-normal {
+        .features-item-icon {
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+      }
 		}
 	}
 }

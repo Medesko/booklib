@@ -2,5 +2,25 @@
     "banner_image": "./assets/imgs/banners/600x300banner1.png",
     "banner_title": "Prise de rendez-vous en ligne !",
     "categories": [
+      {
+          "title": "Service 1",
+          "image": "./assets/imgs/services/200x200basquet.png",
+          "color": "bleu"
+      },
+      {
+          "title": "Service 2",
+          "image": "./assets/imgs/services/200x200futbol.png",
+          "color": "red"
+      },
+      {
+          "title": "Service 3",
+          "image": "./assets/imgs/services/200x200running.png",
+          "color": "yellow"
+      },
+      {
+          "title": "Service 4",
+          "image": "./assets/imgs/services/300x300WaterSports.png",
+          "color": "green"
+      }
     ]
 }

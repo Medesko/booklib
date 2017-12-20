@@ -23,10 +23,6 @@ $output-bourbon-deprecation-warnings: false;
 @import "../theme/common";
 $app-direction: multi;
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../assets/fonts/montserrat.woff2');
-}
-@font-face {
   font-family: 'Rancho';
   src: url('../assets/fonts/rancho.woff2');
 }

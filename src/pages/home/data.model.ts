@@ -7,4 +7,5 @@ export class DataModel {
 export class DataItemModel {
   title: string;
   image: string;
+  color: string;
 }
