@@ -3,7 +3,7 @@
 	width: 100%;
 	text-align: center;
 	font-size: 5vw;
-	font-weight: 400;
+	font-weight: 500;
 	color: $color;
   margin: 0px;
 }
@@ -11,6 +11,37 @@
 
 page-home {
   $categories-grid-padding: 10px;
+  $contact-card-slides-height: 200px;
+
+  .home-slides
+  {
+    height: $contact-card-slides-height;
+
+    ion-slide.home-slide
+    {
+      .slide-zoom
+      {
+        height: 100%;
+      }
+    }
+
+    .swiper-pagination
+    {
+      .swiper-pagination-bullet
+      {
+        opacity: 1;
+        background: $white;
+        width: 10px;
+        height: 10px;
+      }
+
+      .swiper-pagination-bullet-active
+      {
+        background: $theme-color-1;
+      }
+    }
+  }
+
   .home-header
 	{
     .logo-title .toolbar-title
@@ -34,7 +65,7 @@ page-home {
 			.bg-overlay
 			{
 				z-index: 1;
-				background-color: rgba($black-c, .6);
+				background-color: rgba($black-c, .4);
 			}
 
 			ion-spinner {
@@ -61,12 +92,11 @@ page-home {
 
     .categories-title
 		{
-			font-size: 1.3rem;
+			font-size: 1.6rem;
 			font-weight: 400;
-			letter-spacing: 0.4px;
 			color: #5e5874;
-			margin: 15px 8px 15px;
-			text-transform: uppercase;
+			margin: 20px 20px;
+      text-align: center;
     }
 
     .grid-categories
@@ -80,8 +110,24 @@ page-home {
         border-radius: 8px;
 				.category-heading
 				{
-					padding-bottom: 100%;
           border-radius: 50%;
+          text-align: center;
+          ion-avatar {
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+            border-radius: 50%;
+            -webkit-flex-shrink: 0;
+            -ms-flex-negative: 0;
+            flex-shrink: 0;
+            margin: 8px;
+            text-align: center;
+            overflow: hidden;
+          }
+          ion-avatar img, ion-thumbnail img {
+            vertical-align: middle;
+            display: inline;
+          }
 					.bg-overlay
 					{
 						z-index: 1;
@@ -97,7 +143,8 @@ page-home {
 					.heading-row
 					{
 						height: 100%;
-						width: 100%;
+            width: 100%;
+            line-height: 100%;
 						z-index: 3;
 		  			position: absolute;
 						@include align-items(center);
@@ -131,10 +178,11 @@ page-home {
           line-height: 1.4;
           letter-spacing: 0.4px;
           color: #435f71;
-          font-size: 16px;
+          font-size: 13px;
           text-align: center;
-          margin: 4px 0;
+          margin: 8px 0;
           transition: opacity 300ms;
+          text-transform: uppercase;
       }
 
       }

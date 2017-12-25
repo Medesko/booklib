@@ -1,25 +1,29 @@
 {
-    "banner_image": "./assets/imgs/banners/600x300banner1.png",
+    "banner_image": "./assets/imgs/banners/Seb-Jungle-Urbaine-4.jpg",
     "banner_title": "Prise de rendez-vous en ligne !",
     "categories": [
       {
+          "id": 1,
           "title": "Service 1",
-          "image": "./assets/imgs/services/200x200basquet.png",
+          "icon": "./assets/imgs/icons/hair-dryer-30.png",
           "color": "bleu"
       },
       {
+          "id": 2,
           "title": "Service 2",
-          "image": "./assets/imgs/services/200x200futbol.png",
+          "icon": "./assets/imgs/icons/womans-hair-30.png",
           "color": "red"
       },
       {
+          "id": 3,
           "title": "Service 3",
-          "image": "./assets/imgs/services/200x200running.png",
+          "icon": "./assets/imgs/icons/barber-chair-30.png",
           "color": "yellow"
       },
       {
+          "id": 4,
           "title": "Service 4",
-          "image": "./assets/imgs/services/300x300WaterSports.png",
+          "icon": "./assets/imgs/icons/barber-chair-30.png",
           "color": "green"
       }
     ]

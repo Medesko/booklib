@@ -9,6 +9,7 @@ import { DataModel } from './data.model';
 })
 export class HomePage {
     data: DataModel;
+    images: Array<string> = [];
   constructor(public navCtrl: NavController, public HttpClient: HttpClient) {
     this.HttpClient.get('./assets/data/app.json')
     .toPromise()
@@ -16,6 +17,15 @@ export class HomePage {
       this.data = res;
     })
     .catch(err => console.log(err));
+    this.images = [
+			'./assets/imgs/banners/slider-1.jpg',
+			'./assets/imgs/banners/slider-2.jpg',
+			'./assets/imgs/banners/slider-3.png'
+    ];
+  }
+
+  getCategory(id) {
+    console.log(id);
   }
 
 }

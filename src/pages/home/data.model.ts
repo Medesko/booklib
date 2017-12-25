@@ -5,7 +5,8 @@ export class DataModel {
 }
 
 export class DataItemModel {
+  id: number;
   title: string;
-  image: string;
+  icon: string;
   color: string;
 }

@@ -1,25 +1,27 @@
-<ion-header class="home-header">
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title class="logo-title">Scheduler</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content class="home-content">
-    <background-image class="image-heading" [src]="data?.banner_image">
+    <!-- <background-image class="image-heading" [src]="data?.banner_image">
         <ion-row class="heading-row">
           <ion-col no-padding offset-100>
             <h2 class="main-title">{{data?.banner_title}}</h2>
           </ion-col>
         </ion-row>
-      </background-image>
-      <h4 class="categories-title"></h4>
+      </background-image> -->
+      <ion-spinner *ngIf="!images" name="crescent"></ion-spinner>
+      <div *ngIf="images" class="home-banners">
+        <ion-slides class="home-slides" pager="true" loop="true" autoplay="5800">
+          <ion-slide class="home-slide" *ngFor='let value of images'>
+            <background-image class="slide-image" [src]="value"></background-image>
+          </ion-slide>
+        </ion-slides>
+      </div>
+      <h4 class="categories-title">La prise de rendez-vous en ligne !</h4>
       <ion-row class="grid-categories">
-        <ion-col width-33 class="category-item" *ngFor="let category of data?.categories">
-          <ion-row tappable class="category-heading" [ngClass]="category?.color">
+        <ion-col width-33 class="category-item" *ngFor="let category of data?.categories" (click)="getCategory(category?.id)">
+          <ion-row tappable class="category-heading" >
               <ion-col no-padding width-100>
+                  <ion-avatar [ngClass]="category?.color" >
+                    <img [src]="category?.icon" alt="">
+                  </ion-avatar>
               </ion-col>
           </ion-row>
           <h3 class="features-item-title">{{category?.title}}</h3>
